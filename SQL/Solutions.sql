@@ -38,6 +38,13 @@ FROM CITY
 WHERE COUNTRYCODE LIKE 'JPN'
 
 /*
+Weather Observation Station 1
+Query a list of CITY and STATE from the STATION table.
+*/
+SELECT CITY, STATE
+FROM STATION
+
+/*
 Weather Observation Station 11
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 */
