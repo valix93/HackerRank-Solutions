@@ -45,6 +45,15 @@ SELECT CITY, STATE
 FROM STATION
 
 /*
+Weather Observation Station 3
+Query a list of CITY names from STATION for cities that have an even ID number. 
+Print the results in any order, but exclude duplicates from the answer.
+*/
+SELECT DISTINCT CITY
+FROM STATION
+WHERE MOD(ID,2) = 0
+
+/*
 Weather Observation Station 11
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 */
