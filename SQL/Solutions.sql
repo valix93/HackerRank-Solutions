@@ -133,3 +133,11 @@ Query the list of CITY names from STATION that do not start with vowels and do n
 */
 SELECT DISTINCT CITY FROM STATION
 WHERE CITY REGEXP '^[^aeiou].*[^aeiou]$';
+
+/*
+Employee Names
+Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+*/
+SELECT NAME
+FROM EMPLOYEE
+ORDER BY NAME ASC; 
