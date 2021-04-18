@@ -279,3 +279,12 @@ but did not realize her keyboard's 0 key was broken until after completing the c
 She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
 */
 SELECT CEIL(AVG(Salary) - AVG(REPLACE(Salary, '0', ''))) FROM EMPLOYEES;
+
+/*
+African Cities
+Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+*/
+SELECT CITY.NAME
+FROM CITY, COUNTRY
+WHERE COUNTRY.CONTINENT = 'Africa' AND CITY.CountryCode = COUNTRY.Code;
