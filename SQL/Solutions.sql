@@ -30,6 +30,14 @@ FROM CITY
 WHERE ID = 1661
 
 /*
+Japanese Cities' Attributes
+Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
+*/
+SELECT *
+FROM CITY
+WHERE COUNTRYCODE LIKE 'JPN'
+
+/*
 Weather Observation Station 11
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 */
