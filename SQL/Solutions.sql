@@ -45,6 +45,15 @@ SELECT CITY, STATE
 FROM STATION
 
 /*
+Weather Observation Station 2
+Query the following two values from the STATION table:
+1. The sum of all values in LAT_N rounded to a scale of 2 decimal places.
+2. The sum of all values in LONG_W rounded to a scale of 2 decimal places.
+*/
+SELECT ROUND(SUM(LAT_N),2), ROUND(SUM(LONG_W),2)
+FROM STATION;
+
+/*
 Weather Observation Station 3
 Query a list of CITY names from STATION for cities that have an even ID number. 
 Print the results in any order, but exclude duplicates from the answer.
