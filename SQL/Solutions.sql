@@ -15,6 +15,13 @@ FROM CITY
 WHERE COUNTRYCODE LIKE 'USA' and POPULATION > 120000
 
 /*
+Select All
+Query all columns (attributes) for every row in the CITY table.
+*/
+SELECT *
+FROM CITY
+
+/*
 Weather Observation Station 11
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 */
