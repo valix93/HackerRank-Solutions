@@ -38,6 +38,15 @@ FROM CITY
 WHERE COUNTRYCODE LIKE 'JPN'
 
 /*
+Population Census
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+*/
+SELECT SUM(CITY.POPULATION)
+FROM CITY, COUNTRY
+WHERE COUNTRY.CONTINENT = 'Asia' AND CITY.CountryCode = COUNTRY.Code;
+
+/*
 Weather Observation Station 1
 Query a list of CITY and STATE from the STATION table.
 */
