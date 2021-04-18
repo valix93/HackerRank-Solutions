@@ -22,6 +22,14 @@ SELECT *
 FROM CITY
 
 /*
+Select By ID
+Query all columns for a city in CITY with the ID 1661.
+*/
+SELECT *
+FROM CITY
+WHERE ID = 1661
+
+/*
 Weather Observation Station 11
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 */
