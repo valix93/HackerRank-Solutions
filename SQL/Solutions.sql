@@ -144,10 +144,23 @@ ORDER BY NAME ASC;
 
 /*
 Employee Salaries
-Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than $2000 per month who have been employees for less than 10 months. 
-Sort your result by ascending employee_id.
+Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than $2000 per month 
+who have been employees for less than 10 months. Sort your result by ascending employee_id.
 */
 SELECT NAME 
 FROM EMPLOYEE
 WHERE SALARY > 2000 AND MONTHS < 10
 ORDER BY EMPLOYEE_ID ASC;
+
+ /*
+Type of Triangle
+Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. 
+Output one of the following statements for each record in the table:
+Equilateral: It's a triangle with 3 sides of equal length.
+Isosceles: It's a triangle with 2 sides of equal length.
+Scalene: It's a triangle with 3 sides of differing lengths.
+Not A Triangle: The given values of A, B, and C don't form a triangle.*/
+SELECT IF(A+B>C AND A+C>B AND B+C>A, 
+    IF(A=B AND B=C, 'Equilateral', 
+    IF(A=B OR B=C OR A=C, 'Isosceles', 'Scalene')), 
+    'Not A Triangle') FROM TRIANGLES;
