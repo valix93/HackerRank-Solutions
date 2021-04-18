@@ -164,3 +164,11 @@ SELECT IF(A+B>C AND A+C>B AND B+C>A,
     IF(A=B AND B=C, 'Equilateral', 
     IF(A=B OR B=C OR A=C, 'Isosceles', 'Scalene')), 
     'Not A Triangle') FROM TRIANGLES;
+
+/* 
+Revising Aggregations - The Count Function
+Query a count of the number of cities in CITY having a Population larger than 100,000.
+*/
+SELECT COUNT(NAME)
+FROM CITY
+WHERE POPULATION>100000;
