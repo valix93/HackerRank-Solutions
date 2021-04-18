@@ -54,6 +54,13 @@ FROM STATION
 WHERE MOD(ID,2) = 0
 
 /*
+Weather Observation Station 4
+Find the difference between the total number of CITY entries in the table and the number of distinct CITY entries in the table.
+*/
+SELECT (COUNT(CITY) - COUNT(DISTINCT CITY))
+FROM STATION
+                            
+/*
 Weather Observation Station 11
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 */
