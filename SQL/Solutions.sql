@@ -171,6 +171,14 @@ FROM STATION
 WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N < 137.2345);
                                  
 /*
+Weather Observation Station 16
+Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 38.7780. Round your answer to 4 decimal places.
+*/
+SELECT ROUND(MIN(LAT_N),4)
+FROM STATION
+WHERE LAT_N > 38.7780
+                                 
+/*
 Employee Names
 Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
 */
