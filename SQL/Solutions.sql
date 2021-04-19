@@ -324,3 +324,10 @@ FROM STUDENTS
 WHERE MARKS > 75
 ORDER BY RIGHT(NAME,3), ID;
                                     
+/*
+Draw The Triangle 1
+P(R) represents a pattern drawn by Julia in R rows.
+Write a query to print the pattern P(20).
+*/
+set @r=21;
+select repeat('* ', @r := @r - 1) from information_schema.tables limit 20;
