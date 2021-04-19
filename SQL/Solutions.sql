@@ -326,8 +326,29 @@ ORDER BY RIGHT(NAME,3), ID;
                                     
 /*
 Draw The Triangle 1
-P(R) represents a pattern drawn by Julia in R rows.
+P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
 Write a query to print the pattern P(20).
 */
 set @r=21;
-select repeat('* ', @r := @r - 1) from information_schema.tables limit 20;
+SELECT REPEAT('* ', @r := @r - 1) 
+FROM information_schema.TABLES 
+LIMIT 20;
+                                    
+/*
+P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+*
+**
+***
+****
+*****
+Write a query to print the pattern P(20).
+*/
+set @r=0;
+SELECT REPEAT('* ', @r := @r+1)
+FROM information_schema.tables
+LIMIT 20
