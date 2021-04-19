@@ -291,7 +291,8 @@ WHERE COUNTRY.CONTINENT = 'Africa' AND CITY.CountryCode = COUNTRY.Code;
                                       
 /*
 Average Population of Each Continent
-Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and t
+heir respective average city populations (CITY.Population) rounded down to the nearest integer.
 Note: CITY.CountryCode and COUNTRY.Code are matching key columns
 */
 SELECT COUNTRY.Continent, FLOOR(AVG(CITY.Population))
@@ -301,10 +302,25 @@ GROUP BY COUNTRY.Continent
 
 /*
 Top Earners
-We define an employee's total earnings to be their monthly salary x months worked, and the maximum total earnings to be the maximum total earnings for any employee in the Employee table. Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. Then print these values as 2 space-separated integers
+We define an employee's total earnings to be their monthly salary x months worked, and the maximum total earnings to be the maximum total earnings 
+for any employee in the Employee table. 
+Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. 
+Then print these values as 2 space-separated integers
 */
 SELECT (months*salary) as EARNINGS, COUNT(*) 
 FROM EMPLOYEE 
 GROUP BY EARNINGS 
 ORDER BY EARNINGS DESC 
 LIMIT 1;
+
+/*
+Higher Than 75 Marks
+Query the Name of any student in STUDENTS who scored higher than 75 Marks. 
+Order your output by the last three characters of each name. 
+If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+*/
+SELECT NAME
+FROM STUDENTS
+WHERE MARKS > 75
+ORDER BY RIGHT(NAME,3), ID;
+                                    
